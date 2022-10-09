@@ -4,19 +4,131 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-size: 18px;
-    font-family: 'Outfit', sans-serif;
-    color: white;
 }
 
 body {
     background-color: #0d192b;
+    font-family: 'Outfit', sans-serif;
+    color: white;
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
 }
 
 .container {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.square {
+    padding: 20px;
+    margin: 2rem 1rem;
     background-color: #14253d;
+    box-shadow: 0 0 30px 5px hsl(213, 61%, 7%);
+    border-radius: 12px;
+}
+
+.nft_image {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.nft_image img {
+    width: 100%;
+    display: block;
+}
+
+.view_image {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #00fff773;
+    display: none;
+}
+
+.view_image img {
+    position: absolute;
+    width: 50px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.nft_image:hover .view_image {
+    display: block;
+    
+}
+
+.nft_text a{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    margin: 15px 0;
     display: inline-block;
-    justify-content: center;
+    font-size: 17px;
+}
+
+.nft_text a:hover {
+    color: #00fff7;
+}
+
+.nft_text p{
+    color: #768fb2;
+    font-size: 14.4px;
+}
+
+.price_data {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    height: 100vw;
+    padding: 20px 0;
+}
+
+.price,.data {
+    display: flex;
+    align-items: center;
+}
+
+.price p{
+    margin-left: 8px;
+    color: #00fff7;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.data p {
+    margin-left: 8px;
+    font-size: 13px;
+}
+
+hr {
+    border-color: hsl(217, 22%, 38%);
+}
+
+.creator {
+    display: flex;
+    align-items: center;
+}
+
+.creator_avatar img {
+    height: 28px;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-right: 15px;
+    font-size: 14.4px;
+}
+
+.creator_name_link a {
+    font-size: 16px;
+    font-weight: 300;
+    font-size: 14.4px;
+}
+
+.creator_name_link a:hover {
+    color: #00fff7;
 }
